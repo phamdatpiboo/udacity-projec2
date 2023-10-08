@@ -31,7 +31,7 @@ import { Router, Response, Request } from 'express';
   /**************************************************************************** */
   // My custom
   app.get('/filteredimage', async(req: Request, res: Response) => {
-    const img_url = req.query.image_url.toString();
+    const img_url = req.query.image_url;
     if (!img_url) {
       res.status(400).send('Image is requried');
     }
