@@ -34,7 +34,7 @@ import { Router, Response, Request } from 'express';
     const img_url = req.query.image_url.toString();
   
     if (!img_url) {
-      return res.status(400).send(`image_url is required`);
+      res.status(400).send(`image_url is required`);
     }
 
     const filteredImagePath = await filterImageFromURL(img_url);
