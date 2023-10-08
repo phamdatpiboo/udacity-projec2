@@ -30,28 +30,28 @@ import { Router, Response, Request } from 'express';
 
   /**************************************************************************** */
   // My custom
-  // app.get('/filteredimage', async(req: Request, res: Response) => {
-  //   const img_url = req.query.image_url.toString();
+  app.get('/filteredimage', async(req: Request, res: Response) => {
+    const img_url = req.query.image_url.toString();
   
-  //   if (!img_url) {
-  //     return res.status(400).send(`image_url is required`);
-  //   }
+    if (!img_url) {
+      return res.status(400).send(`image_url is required`);
+    }
 
-  //   const filteredImagePath = await filterImageFromURL(img_url);
+    const filteredImagePath = await filterImageFromURL(img_url);
 
-  //   res.status(200).sendFile(filteredImagePath, () => {
-  //       deleteLocalFiles([filteredImagePath]);
-  //   });
+    res.status(200).sendFile(filteredImagePath, () => {
+        deleteLocalFiles([filteredImagePath]);
+    });
 
-  // })
+  })
 
-  //! END @TODO1
+  // //! END @TODO1
   
-  // Root Endpoint
-  // Displays a simple message to the user
-  app.get( "/", async ( req, res ) => {
-    res.send("try GET /filteredimage?image_url={{}}")
-  } );
+  // // Root Endpoint
+  // // Displays a simple message to the user
+  // app.get( "/", async ( req, res ) => {
+  //   res.send("try GET /filteredimage?image_url={{}}")
+  // } );
   
 
   // Start the Server
