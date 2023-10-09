@@ -1,0 +1,7 @@
+{
+  "name": "udacityImageFilter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
