@@ -46,3 +46,19 @@ Prevent requests without valid authentication headers.
 
 Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
 > !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+
+
+## My project checkpoint
+1. The project demonstrates an understanding of a good cloud git process: OK
+    - Stored in personal GitHub repository
+    - Created two branches (development and master) 
+2. The project demonstrates an ability to use typescript and Nodejs: OK
+    - use TypeScript typing and Variable and function names are clear
+3. The project demonstrates the ability to develop using the NodeJS framework: OK
+    - Starting the server with npm run dev and no problems
+4. The project demonstrates an understanding of RESTFUL design: OK
+5. The project demonstrates an understanding of HTTP status codes: OK
+6. The project demonstrates the ability to create functional cloud deployments: OK
+7. The project demonstrates an understanding of AWS Elastic Beanstalk’s CLI and Console: OK
+    LINK ENDPOINT: "http://image-filter-starter-code-dev22.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg"
+    SCREENSHOT Name: "deployment_screenshots/image-filter-2023-10-09_194834.png" 

@@ -29,15 +29,17 @@ import { Router, Response, Request } from 'express';
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
   /**************************************************************************** */
-  // My custom
+  // Pi off project
   app.get('/filteredimage', async(req: Request, res: Response) => {
+    // get url
     const img_url = req.query.image_url.toString();
+    // check url
     if (!img_url) {
       res.status(400).send(`image_url is required`);
     }
-    
+    // fillter
     const filteredImagePath = await filterImageFromURL(img_url);
-
+    // response and delete
     res.status(200).sendFile(filteredImagePath, (err) => {
         deleteLocalFiles([filteredImagePath]);
     });
@@ -48,9 +50,9 @@ import { Router, Response, Request } from 'express';
   
   // // Root Endpoint
   // // Displays a simple message to the user
-  // app.get( "/", async ( req, res ) => {
-  //   res.send("try GET /filteredimage?image_url={{}}")
-  // } );
+  app.get( "/", async ( req, res ) => {
+    res.send("try GET /filteredimage?image_url={{}}")
+  } );
   
 
   // Start the Server
