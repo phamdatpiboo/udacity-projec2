@@ -32,18 +32,17 @@ import { Router, Response, Request } from 'express';
   // Pi off project
   app.get('/filteredimage', async(req: Request, res: Response) => {
     // get url
-    const img_url = req.query.image_url.toString();
+    const imgUrl: string = req.query.image_url.toString();
     // check url
-    if (!img_url) {
+    if (!imgUrl) {
       res.status(400).send(`image_url is required`);
     }
     // fillter
-    const filteredImagePath = await filterImageFromURL(img_url);
+    const filteredImagePath: string = await filterImageFromURL(imgUrl);
     // response and delete
     res.status(200).sendFile(filteredImagePath, (err) => {
         deleteLocalFiles([filteredImagePath]);
     });
-    
   })
 
   // //! END @TODO1
